@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+    <script
+      src="https://kit.fontawesome.com/7512d3f222.js"
       crossorigin="anonymous"
-    />
+    ></script>
     <link rel="shortcut icon" href="./assets/img/4geeks.ico" />
   </head>
 
@@ -18,9 +16,8 @@
       <li>
         <label>Include Cover</label>
         <select class="picker" for="includeCover">
-          <option value="">Include Cover</option>
-          <option value="true">True</option>
-          <option value="false">False</option>
+          <option value="false">No</option>
+          <option value="true">Yes</option>
         </select>
       </li>
       <li>
@@ -56,34 +53,60 @@
       </li>
       <li>
         <label>Role</label>
-        <select class="picker" for="role">
-          <option value="">null</option>
+        <input class="picker" for="role" type="text" />
+        <!-- <select class="picker" for="role">
+          <option value="">Choose a role</option>
           <option value="Web Developer">Web Developer</option>
           <option value="Floor Planner">Floor Planner</option>
           <option value="Technical Writter">Technical Writter</option>
-        </select>
+        </select> -->
       </li>
       <li>
         <label>City</label>
-        <select class="picker" for="city">
+        <input class="picker" for="city" type="text" />
+        <!-- <select class="picker" for="city">
           <option value="">null</option>
           <option value="Miami">Miami</option>
           <option value="Munich">Munich</option>
           <option value="Caracas">Caracas</option>
           <option value="Toronto">Toronto</option>
-        </select>
+        </select> -->
       </li>
       <li>
         <label>Country</label>
-        <select class="picker" for="country">
+        <input class="picker" for="country" type="text" />
+        <!-- <select class="picker" for="country">
           <option value="">null</option>
           <option value="USA">USA</option>
           <option value="Germany">Germany</option>
           <option value="Canada">Canada</option>
           <option value="Venezuela">Venezuela</option>
-        </select>
+        </select> -->
       </li>
     </ul>
+    <div class="filters">
+      <label id="avatarURL">Profile Picture</label>
+      <input
+        class="picker"
+        type="url"
+        name="url"
+        for="avatarURL"
+        placeholder="https://example.com"
+        size="100"
+      />
+    </div>
+    <div class="filters">
+      <label id="background">Cover Image</label>
+      <input
+        class="picker"
+        type="url"
+        name="url"
+        for="background"
+        placeholder="https://example.com"
+        size="100"
+      />
+    </div>
+
     <div id="widget_content"></div>
 
     <!-- do not remove this bundle.js tag -->
