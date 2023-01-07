@@ -33,7 +33,7 @@ function render(variables = {}) {
   if (variables.includeCover == false) {
     cover = "<div class='cover'></div>";
   } else {
-    alert("We should be displaying where to get an image from.");
+    alert("We should be NOW displaying where to get an image from.");
   }
 
   // reset the website body with the new html output
