@@ -30,10 +30,15 @@ function render(variables = {}) {
 
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
-  if (variables.includeCover == false) {
+  if (variables.includeCover === false) {
     cover = "<div class='cover'></div>";
-  } else {
-    alert("We should be NOW displaying where to get an image from.");
+    let backgroundURL = document.getElementById("background-cover-picture");
+    backgroundURL.classList.remove("visible");
+    backgroundURL.classList.add("invisible");
+  } else if (variables.includeCover === true) {
+    let backgroundURL = document.getElementById("background-cover-picture");
+    backgroundURL.classList.remove("invisible");
+    backgroundURL.classList.add("visible");
   }
 
   // reset the website body with the new html output
@@ -44,10 +49,10 @@ function render(variables = {}) {
           <h2>${variables.role}</h2>
           <h3>${variables.city}, ${variables.country}</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/${variables.twitter} target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="https://github.com/${variables.github} target="_blank"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/in/${variables.linkedin} target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/${variables.instagram} target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/${variables.twitter}" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${variables.github}" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/${variables.linkedin}" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${variables.instagram}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
