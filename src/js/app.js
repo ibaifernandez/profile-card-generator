@@ -1,4 +1,4 @@
-import "../../src/style/index.css";
+import "./style/index.css";
 
 /*
  *  EDIT ONLY INSIDE THIS RENDER FUNCTION
